@@ -3,8 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 gem 'rails', '~> 6.1.4'
+# herokuにデプロイするときに必要
+gem 'sqlite3', group: [:development, :test]
 # Postgresqlを使用
-gem 'pg', '~> 1.1'
+gem 'pg', group: :production
 # サーバーにはpumaを使用
 gem 'puma', '~> 5.0'
 # sassを採用
