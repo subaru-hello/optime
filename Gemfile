@@ -16,6 +16,11 @@ gem 'turbolinks', '~> 5'
 # JSON形式のAPIを叩けるようにした https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
+#　bootstrapを追加
+gem 'bootstrap', '~> 4.4.1'
+gem 'jquery-rails'
+# font-awesomeを追加
+gem 'font-awesome-sass', '~> 5.12.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
