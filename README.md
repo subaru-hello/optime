@@ -1,25 +1,51 @@
-# README
+# Optime_analize
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+自分の可処分時間でできることを診断してくれるアプリ
 
-Things you may want to cover:
+## 技術用件
+５つのパラメータをボタンダウン形式で選択できるようにする。
+<br>
+- ボタンダウンは1時間から15時間まで選ぶことができて、各項目の合計値から逆算して可処分時間を割り出す。
+- UIはポップな感じ（黄色とピンク？）
+- ユーザーはゲスト登録
+- 「診断ボタン」を押したら結果が出るようにする。
+- バックエンドロジックは調べて見つけ出す
+- 結果はグラフに落とし込む
+- ランダム関数を利用する
+- 中間テーブルの概念
+- Twitter投稿機能
 
-* Ruby version
+## 画面遷移図
+簡易的な画面せんい図
+ホーム画面⇨名前を登録（ホーム画面）<br>
+⇨診断画面<br>
+⇨ボタンをスクロールして結果を出す（診断画面）
+<br>
+⇨結果画面
+<br>
+⇨他の人の結果を見る(結果画面)
+<br>
+⇨Twitterでシェアする(結果画面)
+<br>
+⇨グラフで確認できるようにする（結果画面）
 
-* System dependencies
+## 結果画面例
+あなたの1日の可処分時間は〇〇分です。
+できることは〇〇です。
+積み重ねて〇〇になりましょう！
+- １週間で〇〇（何分）
+- １ヶ月で〇〇（何分）
+- ６ヶ月で〇〇（何分）
+- 1年で〇〇（何分）
+- 5年で〇〇（何分）
+- 10年で〇〇（何分）
+- 100年で〇〇(何分)
+と診断結果を出す
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# optime_2
+### 具体的な5つの項目
+- 睡眠時間
+- 通勤時間
+- 食事時間
+- 勤務時間
+- 身体清掃時間（風呂歯磨きトイレ）
