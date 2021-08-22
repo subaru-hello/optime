@@ -2,7 +2,7 @@
 //= require turbolinks
 //= require jquery/dist/jquery.js 
 //= require_tree .
-//= require bootstrap/dist/js/bootstrap.min 
+//= require bootstrap-sprockets
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"

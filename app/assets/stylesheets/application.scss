@@ -1,7 +1,8 @@
 
 /*
-*= require bootstrap/dist/css/bootstrap.min.css
 *= require_tree .
 *= require_self
 *= require optimes
-*/
+*/  
+@import "bootstrap-sprockets";
+@import "bootstrap";
