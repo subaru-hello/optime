@@ -1,0 +1,14 @@
+<h1 class ="text-center mb-3 mt-4">箇所分時間を計算する</h1>
+<p class = "text-center">お名前を入力してください。</p>
+
+<%= form_with model: @user, html: { class: 'text-center mt-3' },  local: true do |f| %>
+
+     <div class="form-group ms-4">
+       <%= f.label :guest_name %>
+       <%= f.text_field :guest_name, class: 'form-control text-center', id: 'user_last_name'%>
+     </div>
+     <div class="actions">
+       <%= f.submit '登録', class: 'btn btn-primary' %>
+     </div>
+     <%end%>
+
