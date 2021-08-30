@@ -1,6 +1,6 @@
 class Optime < ApplicationRecord
     belongs_to :user
-    validates :sleep, presence: true
+    validates :sleepy, presence: true
     validates :work, presence: true
     validates :commute, presence: true
     validates :eat, presence: true
