@@ -1,0 +1,8 @@
+<h1>診断結果</h1>
+
+
+<%= render 'result', {optime: @optime, user: @user}%>
+<div class="text-center mb-3 mt-4">
+<p class="mb-3 mt-4"><%= link_to 'もう一回診断する',users_path %></p>
+<%= link_to 'みんなの可処分時間',optimes_path %>
+</div>
