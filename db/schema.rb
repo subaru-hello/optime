@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_08_23_000801) do
 
   create_table "optimes", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "sleep", null: false
+    t.integer "sleepy", null: false
     t.integer "commute", null: false
     t.integer "eat", null: false
     t.integer "work", null: false
