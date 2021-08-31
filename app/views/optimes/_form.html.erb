@@ -7,7 +7,7 @@
     <%= f.text_field :title, class: 'form-control text-center mt-3 ' %>
   </div>
   <div class="field">
-    <%= f.label :sleepy %>
+    <%= f.label :sleepy ,class: "subject"%>
     <%= f.select :sleepy, 
    options_for_select([
        ['睡眠時間を選択してください', ''], 
@@ -27,7 +27,7 @@
        ]), {}, {class: 'optime__select'} %>
   </div>
   <div class="field">
-  <%= f.label :commute %>
+  <%= f.label :commute ,class: "subject"%>
     <%= f.select :commute, 
        options_for_select([
        ['通勤時間（往復）を選択してください', ''], 
@@ -39,7 +39,7 @@
        ]), {}, {class: 'optime__select'} %>
   </div>
   <div class="field">
-  <%= f.label :work %>
+  <%= f.label :work ,class: "subject"%>
     <%= f.select :work, 
        options_for_select([
        ['勤務時間を選択してください', ''], 
@@ -57,7 +57,7 @@
        ]), {}, {class: 'optime__select'} %>
   </div>
   <div class="field">
-  <%= f.label :eat %>
+  <%= f.label :eat ,class: "subject"%>
     <%= f.select :eat, 
        options_for_select([
        ['食事時間を選択してください', ''], 
@@ -75,7 +75,7 @@
        ]), {}, {class: 'optime__select'} %>
   </div>
   <div class="field">
-  <%= f.label :hygiene %>
+  <%= f.label :hygiene ,class: "subject"%>
     <%= f.select :hygiene, 
        options_for_select([
        ['衛生（風呂歯磨きトイレ）時間を選択してください', ''], 
