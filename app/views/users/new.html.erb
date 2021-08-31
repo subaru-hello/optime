@@ -1,4 +1,11 @@
-<h1 class ="text-center mb-3 mt-4">箇所分時間を計算する</h1>
+<h1 class ="text-center mb-3 mt-4">可処分時間を計算してみよう</h1>
+  <div class ="image_new d-flex justify-content-between">
+      <%= image_tag 'food.svg',name: '飯'%>
+      <%= image_tag 'commute.svg',name: '通勤'%>
+      <%= image_tag 'sleep.svg',name: '睡眠'%>
+      <%= image_tag 'work.svg',name: '勤務'%>
+      <%= image_tag 'hygiene.svg',name: '衛生'%>
+</div>
 <p class = "text-center">お名前を入力してください。</p>
 
 <%= form_with model: @user, html: { class: 'text-center mt-3' },  local: true do |f| %>
