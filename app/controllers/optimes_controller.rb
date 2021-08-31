@@ -5,7 +5,6 @@ class OptimesController < ApplicationController
   end
 
   def show
-    @optimes = Optime.all.includes(:user).order(created_at: :desc)
     @user = User.find(params[:id])
     @optimes = Optime.find(params[:id])
   end
