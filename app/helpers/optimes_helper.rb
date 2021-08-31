@@ -14,18 +14,18 @@ module OptimesHelper
         if optimes.commute >= 2
           return "職場まで遠いと感じませんか?引っ越しも考えましょうか。"
         else
-          return "お仕事お疲れ様です。"
+          return "お仕事お疲れ様です。満員電車に悩みはありませんか？引っ越しも考えましょうか。"
         end
      end
     def good_work(optimes)
-        if optimes.work >= 7
+        if optimes.work <= 7
           return "業務効率化が計れていますね"
         else
           return "働きすぎじゃないですか？勤務時間が短くて年収の高い会社に転職しましょうか。" 
         end
      end
     def good_eat(optimes)
-        if optimes.eat <= 2
+        if optimes.eat >= 2
           return "優雅に食事を楽しめてますね。"
         else
           return "よくかんで食べれてますか？食事の時間が取れるくらいに勤務時間の短い会社に転職しましょうか。" 
@@ -33,7 +33,7 @@ module OptimesHelper
      end
     def good_hygiene(optimes)
         unless optimes.hygiene >= 2
-          return "清潔ですね"
+          return "清潔ですね。運動時間も確保できると最高ですね。"
         else
           return "自分を磨けてますか？自分の時間を確保できるくらい勤務時間の短い会社に転職しましょうか。" 
         end
