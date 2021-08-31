@@ -24,7 +24,7 @@ module OptimesHelper
         end
      end
     def good_work(optimes)
-        if optimes.work = 0
+        if optimes.work == 0
           return "働いてないんですか？逆に暇ですよね。求職しましょ。"
         elsif optimes.work <= 7
           return "業務効率化が計れていますね。ワークライフバランスが取れていて何よりです。"
