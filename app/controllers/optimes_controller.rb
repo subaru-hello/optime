@@ -1,6 +1,6 @@
 class OptimesController < ApplicationController
   def index
-    @optimes = Optime.all.includes(:user).order(created_at: :desc)
+    @optimes = Optime.page(params[:page]).per(6).includes(:user).order(created_at: :desc)
     @user = User.last
   end
 
