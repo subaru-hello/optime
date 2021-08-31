@@ -23,6 +23,11 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 # font-awesomeを追加
 gem 'font-awesome-sass', '~> 5.12.0'
+#pagination実装
+gem 'kaminari'
+#国際化
+gem 'rails-i18n'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
