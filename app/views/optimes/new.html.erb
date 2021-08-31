@@ -1,2 +1,6 @@
-<h1>Optimes#new</h1>
-<p>Find me in app/views/optimes/new.html.erb</p>
+<h1 class ="text-center mb-3 mt-4"><%= @user.guest_name%>さんの可処分時間を計算する</h1>
+
+<%= render 'form', {optime: @optime}%>
+
+<%= link_to 'Back', optimes_path %>
+

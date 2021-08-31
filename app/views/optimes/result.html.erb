@@ -1,0 +1,6 @@
+
+<%= render 'result', {optime: @optime, user: @user}%>
+<div class="d-flex justify-content-between">
+  <%= link_to 'もう一回診断する',new_user_path %>
+  <%= link_to 'みんなの可処分時間',optimes_path %>
+</div>

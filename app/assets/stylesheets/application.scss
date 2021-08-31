@@ -5,3 +5,61 @@
 *= require optimes
 */  
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@500&display=swap');
+body{
+    background-color: rgba(248, 245, 38, 0.897);
+    font-family: 'Crimson Pro', serif;
+}
+ul {
+    list-style: none;
+  }
+  span{
+      background-color: rgba(248, 245, 38, 0.897);
+      border-radius: 30px;
+  }
+
+  .chart_area{
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+  }
+
+  .title{
+      text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    width: 200px;
+    border-bottom: solid 2px;
+    margin: 10px 0px 20px 550px;
+  }
+
+  .subtitle{
+      font-size: 20px;
+      font-weight: bold;
+      width: 160px;
+      margin: 0 auto;
+  }
+
+  .comment{
+    font-size: 20px;
+  }
+
+  .wrapper{
+      background-color: #fff;
+  }
+
+  a{
+      font-size: 30px;
+      margin: 0 auto;
+      border-radius: 30px;
+      background-color: #fff;
+  }
+
+  img{
+      width: 150px;
+  }
+
+  .card-content{
+      margin: 10px;
+  }
