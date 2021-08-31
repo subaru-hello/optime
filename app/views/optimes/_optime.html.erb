@@ -1,0 +1,17 @@
+
+<div class="card text-center text-dark border-warning mb-3" style="max-width: 18rem;">
+<p class ="text-center mb-3 mt-4 border-bottom card-content"><%=  "#{optime.user.guest_name}さん"%></p>
+  <div class="card-header"> 
+    <h5 class="card-title text-center"><%= link_to optime.title, optime_path(optime) %><br>
+  </h5>
+  </div>
+  <div id="optime-id-<%= optime.id %>">
+  <div class="card-body">
+        <p class="card-text"><%= "睡眠: #{optime.sleepy}時間" %></p>
+        <p class="card-text"><%= "仕事: #{optime.work}時間" %></p>
+        <p class="card-text"><%= "食事: #{optime.eat}時間"%></p>
+        <p class="card-text"><%= "通勤: #{optime.commute}時間" %></p>
+        <p class="card-text"><%= "衛生管理: #{optime.hygiene}時間" %></p>
+  </div>
+</div>
+</div>
