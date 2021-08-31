@@ -1,7 +1,7 @@
 class OptimesController < ApplicationController
   def index
     @optimes = Optime.all.includes(:user).order(created_at: :desc)
-    @user = User.find_by(id: params[:id])
+    @user = User.last
   end
 
   def show
@@ -26,13 +26,13 @@ class OptimesController < ApplicationController
   end
 
   def result
-    @user = User.find_by(id: params[:id])
-    @optime = Optime.find_by(id: params[:id])
+    @user = User.last
+    @optime = Optime.last
   end
-  
+
   private
 
   def optime_params
-    params.require(:optime).permit(:guest_name,:title,:sleep, :eat, :work, :commute, :hygiene)
+    params.require(:optime).permit(:guest_name,:title,:sleepy, :eat, :work, :commute, :hygiene)
   end
 end
