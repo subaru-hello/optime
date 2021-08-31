@@ -1,0 +1,122 @@
+<h1 class="text-center title">診断結果</h1>
+<div class="bg-white" style="border-radius: 100px; ">
+<h2 class="text-center mb-3 mt-4"><%= @user.guest_name%>さんの可処分時間は<%= sum_of_undisposable(optime) %>です</h2>
+<h2 class="text-center mb-3 mt-4">人生100年時代、<span class="big"><%= sum_of_undisposable(optime) %></span>を何に充てる?</h2>
+</div>
+  <div class ="image_new d-flex justify-content-between">
+    <div  >
+      <p>瞑想？</p>
+      <%= image_tag 'meditate.svg',name: '瞑想にする？'%>
+    </div>
+      <div  >
+      <p>仕事？</p>
+<%= image_tag 'work.svg'%>
+</div>
+  <div  >
+      <p>ダンス？</p>
+<%= image_tag 'dance.svg'%>
+</div>
+  <div  >
+      <p>お絵描き？</p>
+<%= image_tag 'drawing.svg'%>
+</div>
+  <div  >
+      <p>筋トレ？</p>
+<%= image_tag 'gym.svg'%>
+</div>
+</div>
+  <div class ="chart_area">
+    <canvas id="myChart"></canvas> 
+  </div>
+    <div class="text-center wrapper mb-3 mt-4">
+      <h2  class="text-center title" >固定時間削減方法</h2>
+        <ul>
+            <li><p class="optime subtitle border-bottom" >睡眠時間</p><span class="optime__select"><%= optime.sleepy %></span>時間</li>
+              <li class="mb-4 comment"><%= good_sleep(optime)%></li>
+
+            <li><p class="optime subtitle border-bottom">勤務時間</p><span class="optime__select"><%=optime.work%></span>時間</li>
+              <li class="mb-4 comment"><%= good_work(optime)%></li>
+       
+            <li><p class="optime subtitle border-bottom">食事時間</p><span class="optime__select"><%=optime.eat%></span>時間</li>
+              <li class="mb-4 comment"><%= good_eat(optime)%></li>
+       
+            <li><p class="optime subtitle border-bottom">通勤時間</p><span class="optime__select"><%=optime.commute%></span>時間</li>
+              <li class="mb-4 comment"><%= good_commute(optime)%></li>
+       
+            <li><p class="optime subtitle border-bottom">衛生管理時間</p><span class="optime__select"><%=optime.hygiene%></span>時間</li>
+              <li class="mb-4 comment"><%= good_hygiene(optime)%></li>
+        </ul>
+    </div>
+
+<script>
+ //ページ内の科目を取得
+    var subject01 = document.querySelectorAll('.optime')[0].innerHTML,
+        subject02 = document.querySelectorAll('.optime')[1].innerHTML,
+        subject03 = document.querySelectorAll('.optime')[2].innerHTML,
+        subject04 = document.querySelectorAll('.optime')[3].innerHTML,
+        subject05 = document.querySelectorAll('.optime')[4].innerHTML,
+
+        //ページ内の数値を取得
+        subjectnum01 = document.querySelectorAll('.optime__select')[0].innerHTML,
+        subjectnum02 = document.querySelectorAll('.optime__select')[1].innerHTML,
+        subjectnum03 = document.querySelectorAll('.optime__select')[2].innerHTML,
+        subjectnum04 = document.querySelectorAll('.optime__select')[3].innerHTML,
+        subjectnum05 = document.querySelectorAll('.optime__select')[4].innerHTML;
+            //取得した科目と数値をChart.jsに入れる
+    var data = {
+        labels: [subject01, subject02, subject03, subject04, subject05],
+        datasets: [{
+            label: '可処分時間項目',
+            data: [subjectnum01, subjectnum02, subjectnum03, subjectnum04, subjectnum05],
+            backgroundColor: ['red','blue','green','white','black'],
+            borderColor: 'rgba(255,135,0,1)',
+            pointBackgroundColor: 'rgba(255,135,0,1)',
+            pointBorderColor: 'rgba(255,135,0,0)',
+            pointBorderWidth: 0,
+            pointRadius: 5,
+            pointStyle: 'circle',
+            pointHoverRadius: 5,
+            pointHitRadius: 5
+        }]
+    };
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart   = new Chart(ctx, {
+        type: 'doughnut',
+        data: data,
+        options: {
+            title: {
+                display: true,
+                text: '固定時間内訳',
+                padding: 4,
+                fontSize: 20
+            },
+            legend: {
+                text: '固定時間内訳',
+                display: false,
+                labels: {
+                    fontColor: 'rgb(5, 99, 132)',
+                    fontSize: 16
+                }
+            },
+            scale: {
+                pointLabels: {
+                    fontSize: 15,
+                    fontColor: 'rgb(0, 65, 112)',
+                    padding: 20
+                },
+                ticks: {
+                    beginAtZero: true,
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0
+                }
+            },
+            maintainAspectRatio: false,
+        }
+    });
+</script>
