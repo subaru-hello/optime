@@ -1,4 +1,12 @@
 <h1 class="text-center title">診断結果</h1>
+<%= link_to 'Twitter', "https://twitter.com/share?url=#{@user.guest_name}さんの可処分時間は#{sum_of_undisposable(optime)}です。
+固定時間内訳:　
+　睡眠：#{optime.sleepy }
+　食事:#{optime.eat}
+　衛生時間:#{optime.hygiene}
+　通勤時間:#{optime.commute}
+　勤務時間:#{optime.work}　
+https://caloptime.herokuapp.com/", title: 'Twitter', target: '_blank' %>
 <div class="bg-white" style="border-radius: 100px; ">
 <h2 class="text-center mb-3 mt-4"><%= @user.guest_name%>さんの可処分時間は<%= sum_of_undisposable(optime) %>です</h2>
 <h2 class="text-center mb-3 mt-4">人生100年時代、<span class="big"><%= sum_of_undisposable(optime) %></span>を何に充てる?</h2>
