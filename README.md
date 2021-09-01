@@ -3,6 +3,32 @@
 ## 概要
 自分の可処分時間でできることを診断してくれるアプリ
 
+![https://i.gyazo.com/c46e0765d519430f3e1593b2aa0f2c7d.gif](https://i.gyazo.com/c46e0765d519430f3e1593b2aa0f2c7d.gif)
+
+![https://i.gyazo.com/8d34cf0935e2c78529fb74e7c5ed10e5.gif](https://i.gyazo.com/8d34cf0935e2c78529fb74e7c5ed10e5.gif)
+
+![https://i.gyazo.com/c9c22c8b8dedeb0c4c260cae11f1ccc8.gif](https://i.gyazo.com/c9c22c8b8dedeb0c4c260cae11f1ccc8.gif)
+## 使用技術
+
+### Backend
+- ruby 2.6.6
+- Rails 6.1.4
+
+### Frontend
+- jquery
+- bootstrap 4
+- font-awesome
+
+### DB
+- psql (PostgreSQL) 13.3
+
+### インフラ環境
+heroku
+
+### gem
+bootstrap
+kaminari
+rails-i18n
 ## 技術用件
 ５つのパラメータをボタンダウン形式で選択できるようにする。
 <br>
@@ -48,4 +74,4 @@
 - 通勤時間
 - 食事時間
 - 勤務時間
-- 身体清掃時間（風呂歯磨きトイレ）
+- 衛生管理時間（風呂歯磨きトイレ）
