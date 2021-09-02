@@ -17,9 +17,8 @@ class OptimesController < ApplicationController
     @user = User.last
     @optime= @user.optimes.build(optime_params)
     if @optime.save
-      redirect_to  result_path ,success:  "#{@optime.title}は投稿されました"
+      redirect_to  result_path 
     else
-      flash[:danger] = "掲示板を作成できませんでした"
       render :new
     end
   end
