@@ -19,7 +19,6 @@ class OptimesController < ApplicationController
     if @optime.save
       redirect_to  result_path 
     else
-      @optime= @user.optimes.build(optime_params)
       render :new
     end
   end

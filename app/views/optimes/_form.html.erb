@@ -4,7 +4,7 @@
 
   <div class="field text-center mt-3 ">
     <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control text-center mt-3 ' %>
+    <%= f.text_field :title,selected: optime.title, class: 'form-control text-center mt-3 ' %>
   </div>
   <div class="field">
     <%= f.label :sleepy ,class: "subject"%>
@@ -25,7 +25,7 @@
        ['11', '11'], 
        ['12', '12'],
        ['13', '13'],
-       ]), {}, {class: 'optime__select'} %>
+       ],selected: optime.sleepy), {}, {class: 'optime__select'} %>
   </div>
   <div class="field">
   <%= f.label :commute ,class: "subject"%>
@@ -38,7 +38,7 @@
        ['3', '3'],
        ['4', '4'],
        ['5', '5'],
-       ]), {}, {class: 'optime__select'} %>
+       ],selected: optime.commute), {}, {class: 'optime__select'} %>
   </div>
   <div class="field">
   <%= f.label :work ,class: "subject"%>
@@ -57,7 +57,7 @@
        ['9', '9'],
        ['10', '10'],
        ['11', '11']
-       ]), {}, {class: 'optime__select'} %>
+       ],selected: optime.work), {}, {class: 'optime__select'} %>
   </div>
   <div class="field">
   <%= f.label :eat ,class: "subject"%>
@@ -76,7 +76,7 @@
        ['9', '9'],
        ['10', '10'],
        ['11', '11']
-       ]), {}, {class: 'optime__select'} %>
+       ],selected: optime.eat), {}, {class: 'optime__select'} %>
   </div>
   <div class="field">
   <%= f.label :hygiene ,class: "subject"%>
@@ -95,7 +95,7 @@
        ['9', '9'],
        ['10', '10'],
        ['11', '11']
-       ]), {}, {class: 'optime__select'} %>
+       ],selected: optime.hygiene), {}, {class: 'optime__select'} %>
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn-primary' %>
