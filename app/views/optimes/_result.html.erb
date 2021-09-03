@@ -18,16 +18,16 @@
       <p>瞑想？</p>
       <%= image_tag 'meditate.svg',name: '瞑想にする？'%>
     </div>
-      <div  >
+      <div class="not_show" >
       <p>仕事？</p>
 <%= image_tag 'work.svg'%>
 </div>
-  <div  >
+  <div class="not_show" >
       <p>ダンス？</p>
 <%= image_tag 'dance.svg'%>
 </div>
   <div  >
-      <p>お絵描き？</p>
+      <p class="not_show" >お絵描き？</p>
 <%= image_tag 'drawing.svg'%>
 </div>
   <div  >
@@ -36,7 +36,7 @@
 </div>
 </div>
   <div class ="chart_area">
-    <canvas id="myChart"></canvas> 
+    <canvas id="myChart" class="for_res"></canvas> 
   </div>
     <div class="text-center wrapper mb-3 mt-4">
       <h2  class="text-center title" >固定時間削減方法</h2>
@@ -44,7 +44,7 @@
             <li><p class="optime subtitle border-bottom" >睡眠時間</p><span class="optime__select"><%= optime.sleepy %></span>時間</li>
               <li class="mb-4 comment"><%= good_sleep(optime)%></li>
 
-            <li><p class="optime subtitle border-bottom">勤務時間</p><span class="optime__select"><%=optime.work%></span>時間</li>
+            <li><p class="optime subtitle border-bottom ">勤務時間</p><span class="optime__select"><%=optime.work%></span>時間</li>
               <li class="mb-4 comment"><%= good_work(optime)%></li>
        
             <li><p class="optime subtitle border-bottom">食事時間</p><span class="optime__select"><%=optime.eat%></span>時間</li>

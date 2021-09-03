@@ -63,3 +63,27 @@ ul {
   .card-content{
       margin: 10px;
   }
+
+  @media (max-width: 480px){
+      body{
+          width: 480px;
+      }
+    .container{
+        width: 480px;
+        z-index: 0;
+    }
+    .not_show{
+       display:none; 
+    }
+    .title{
+        font-size: 25px;
+        font-weight: bold;
+        border-bottom: solid 2px;
+        width: 160px;
+        margin: 0 auto;
+    }
+
+    .for_res{
+        width: 100%;
+    }
+    }
