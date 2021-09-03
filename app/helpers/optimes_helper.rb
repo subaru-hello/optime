@@ -4,9 +4,9 @@ module OptimesHelper
     end
 
     def good_sleep(optimes)
-        if optimes.sleepy = 0
+        if optimes.sleepy == 0
           return "いくらなんでも寝てくださいね、、体あっての仕事ですよ、、転職しましょうよ、、、"
-        elsif optimes.sleepy < 3
+        elsif optimes.sleepy <= 3
           return "流石にショートスリープすぎません？睡眠時間の確保できる会社に転職しましょうか。"
         elsif　optimes.sleepy <= 6
           return "最低でも7時間は寝たいですね。勤務時間が短い会社に転職しましょうか。"
