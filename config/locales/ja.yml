@@ -1,4 +1,17 @@
 ja:
+  activerecord:
+    attributes:
+      user: 
+        guest_name: ゲスト名
+      optime:
+        sleepy: "睡眠"
+        title: "タイトル"
+        work: "勤務"
+        commute: "通勤"
+        eat: "食事"
+        hygiene: "風呂・歯磨き・トイレ"
+
+
   views:
     pagination:
       first: "&laquo; 最初"
