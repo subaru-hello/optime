@@ -1,42 +1,46 @@
+<div class="container">
 <h1 class="text-center title">診断結果</h1>
-<div class ="text-center title "><%= link_to 'Share', "https://twitter.com/share?url=https://caloptime.herokuapp.com&text=【#{@user.guest_name}さんの可処分時間】は%0a#{sum_of_undisposable(optime)}でした。
-%0a固定時間内訳:　
-%0a睡眠：#{optime.sleepy}時間
-%0a食事：#{optime.eat}時間
-%0a衛生時間：#{optime.hygiene}時間
-%0a通勤時間：#{optime.commute}時間
-%0a勤務時間：#{optime.work}時間
-%0a@247subaru%20%23Optime%20%20%23人生100年時代%20", title: 'Twitter',class:'fab fa-twitter', target: '_blank' %>
-</div>
+  <div class ="text-center title ">
+    <%= link_to 'Share', "https://twitter.com/share?url=https://caloptime.herokuapp.com&text=【#{@user.guest_name}さんの可処分時間】は%0a#{sum_of_undisposable(optime)}でした。
+      %0a固定時間内訳:　
+      %0a睡眠：#{optime.sleepy}時間
+      %0a食事：#{optime.eat}時間
+      %0a衛生時間：#{optime.hygiene}時間
+      %0a通勤時間：#{optime.commute}時間
+      %0a勤務時間：#{optime.work}時間
+      %0a@247subaru%20%23Optime%20%20%23人生100年時代%20",
+      title: 'Twitter',class:'fab fa-twitter', target: '_blank' %>
+  </div>
 
-<div class="bg-white" style="border-radius: 100px; ">
-<h2 class="text-center mb-3 mt-4"><%= @user.guest_name%>さんの可処分時間は<%= sum_of_undisposable(optime) %>です</h2>
-<h2 class="text-center mb-3 mt-4">人生100年時代、<span class="big"><%= sum_of_undisposable(optime) %></span>を何に充てる?</h2>
-</div>
-  <div class ="image_new d-flex justify-content-between">
-    <div  >
-      <p>瞑想？</p>
-      <%= image_tag 'meditate.svg',name: '瞑想にする？'%>
+    <div class="bg-white" style="border-radius: 100px; ">
+      <h2 class="text-center mb-3 mt-4"><%= @user.guest_name%>さんの可処分時間は<br>
+        <span class="big"><%= sum_of_undisposable(optime) %></span>です</h2>
+          <h2 class="text-center mb-3 mt-4">人生100年時代、<span class="big"><%= sum_of_undisposable(optime) %></span>を何に充てる?</h2>
     </div>
+    <div class ="image_new d-flex justify-content-between">
+      <div>
+        <p>瞑想？</p>
+          <%= image_tag 'meditate.svg',name: '瞑想にする？'%>
+      </div>
       <div class="not_show" >
-      <p>仕事？</p>
-<%= image_tag 'work.svg'%>
+        <p>仕事？</p>
+          <%= image_tag 'work.svg'%>
+      </div>
+      <div class="not_show" >
+        <p>ダンス？</p>
+         <%= image_tag 'dance.svg'%>
+      </div>
+      <div>
+        <p class="not_show" >お絵描き？</p>
+        <%= image_tag 'drawing.svg'%>
+      </div>
+      <div>
+        <p>筋トレ？</p>
+        <%= image_tag 'gym.svg'%>
+    </div>
 </div>
-  <div class="not_show" >
-      <p>ダンス？</p>
-<%= image_tag 'dance.svg'%>
-</div>
-  <div  >
-      <p class="not_show" >お絵描き？</p>
-<%= image_tag 'drawing.svg'%>
-</div>
-  <div  >
-      <p>筋トレ？</p>
-<%= image_tag 'gym.svg'%>
-</div>
-</div>
-  <div class ="chart_area">
-    <canvas id="myChart" class="for_res"></canvas> 
+  <div class ="chart_area mp-3">
+    <canvas id="myChart" ></canvas> 
   </div>
     <div class="text-center wrapper mb-3 mt-4">
       <h2  class="text-center title" >固定時間削減方法</h2>
@@ -57,6 +61,7 @@
               <li class="mb-4 comment"><%= good_hygiene(optime)%></li>
         </ul>
     </div>
+</div>
 
 <script>
  //ページ内の科目を取得
