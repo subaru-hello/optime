@@ -1,5 +1,9 @@
 # Optime_analize
 
+### **メインページ例**
+
+<a href="https://gyazo.com/d2574f6041dbd0e2e3d544f15cbf986e"><img src="https://i.gyazo.com/d2574f6041dbd0e2e3d544f15cbf986e.png" alt="Image from Gyazo" width="799"/></a>
+
 ## 概要
 1日の可処分時間を可視化するアプリです。<br>
 *可処分時間（disposable time）* とは、消費者が自分の意志で自由に使える時間のことです。<br>
@@ -44,10 +48,8 @@
 
 - SNSで自分の確保時間を宣言することで、勉強時間を確保しないといけない気持ちになる。結果として、勉強する時間が増え、なりたい職業になることができる。
 - 勉強した結果欲しい資格が手に入るので、やれば出来るんだ！と自分に自信を持つことができる。
-- 
-### **メインページ例**
 
-<a href="https://gyazo.com/d2574f6041dbd0e2e3d544f15cbf986e"><img src="https://i.gyazo.com/d2574f6041dbd0e2e3d544f15cbf986e.png" alt="Image from Gyazo" width="799"/></a>
+
 
 ### **使用例**
 ![https://i.gyazo.com/8d34cf0935e2c78529fb74e7c5ed10e5.gif](https://i.gyazo.com/8d34cf0935e2c78529fb74e7c5ed10e5.gif)
