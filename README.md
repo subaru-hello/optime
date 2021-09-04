@@ -44,11 +44,12 @@
 
 - SNSで自分の確保時間を宣言することで、勉強時間を確保しないといけない気持ちになる。結果として、勉強する時間が増え、なりたい職業になることができる。
 - 勉強した結果欲しい資格が手に入るので、やれば出来るんだ！と自分に自信を持つことができる。
+- 
+### **メインページ例**
+
+<a href="https://gyazo.com/d2574f6041dbd0e2e3d544f15cbf986e"><img src="https://i.gyazo.com/d2574f6041dbd0e2e3d544f15cbf986e.png" alt="Image from Gyazo" width="799"/></a>
 
 ### **使用例**
-
-![https://i.gyazo.com/c46e0765d519430f3e1593b2aa0f2c7d.gif](https://i.gyazo.com/c46e0765d519430f3e1593b2aa0f2c7d.gif)
-
 ![https://i.gyazo.com/8d34cf0935e2c78529fb74e7c5ed10e5.gif](https://i.gyazo.com/8d34cf0935e2c78529fb74e7c5ed10e5.gif)
 
 ![https://i.gyazo.com/c9c22c8b8dedeb0c4c260cae11f1ccc8.gif](https://i.gyazo.com/c9c22c8b8dedeb0c4c260cae11f1ccc8.gif)
