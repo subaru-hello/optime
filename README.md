@@ -1,6 +1,5 @@
 # Optime_analize
-https://img.shields.io/badge/${Ruby}-${Ruby}-${red}.svg
-https://img.shields.io/badge/${Rails}-${Rails}-${red}.svg
+
 ### **メインページ例**
 
 <a href="https://gyazo.com/d2574f6041dbd0e2e3d544f15cbf986e"><img src="https://i.gyazo.com/d2574f6041dbd0e2e3d544f15cbf986e.png" alt="Image from Gyazo" width="799"/></a>
