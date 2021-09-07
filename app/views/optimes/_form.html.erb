@@ -1,34 +1,37 @@
 
 <%= form_with model: optime, html: { class: 'text-center mt-3' },  local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
+  <div class="container">
+  <div class="row">
+    <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <div class="form-group">
+          <%= f.label :title %>
+          <%= f.date_field :title,selected: optime.title, class: 'form-control text-center mt-3 ' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :sleepy ,class: "subject"%>
+          <%= f.select :sleepy, 
+          options_for_select([
+         ['睡眠時間を入力', ''], 
+         ['0', '0'], 
+          ['1', '1'], 
+          ['２', '２'], 
+          ['3', '3'], 
+          ['4', '4'], 
+          ['5', '5'], 
+          ['6', '6'], 
+          ['7', '7'], 
+          ['8', '8'], 
+          ['9', '9'], 
+          ['10', '10'], 
+          ['11', '11'], 
+          ['12', '12'],
+          ['13', '13'],
+          ],selected: optime.sleepy), {}, {class: 'optime__select'} %>
 
-  <div class="field text-center mt-3 ">
-    <%= f.label :title %>
-    <%= f.text_field :title,selected: optime.title, class: 'form-control text-center mt-3 ' %>
-  </div>
-  <div class="field">
-    <%= f.label :sleepy ,class: "subject"%>
-    <%= f.select :sleepy, 
-   options_for_select([
-       ['睡眠時間を入力', ''], 
-       ['0', '0'], 
-       ['1', '1'], 
-       ['２', '２'], 
-       ['3', '3'], 
-       ['4', '4'], 
-       ['5', '5'], 
-       ['6', '6'], 
-       ['7', '7'], 
-       ['8', '8'], 
-       ['9', '9'], 
-       ['10', '10'], 
-       ['11', '11'], 
-       ['12', '12'],
-       ['13', '13'],
-       ],selected: optime.sleepy), {}, {class: 'optime__select'} %>
-  </div>
-  <div class="field">
-  <%= f.label :commute ,class: "subject"%>
+        </div>
+        <div class="form-group">
+         <%= f.label :commute ,class: "subject"%>
     <%= f.select :commute, 
        options_for_select([
        ['通勤時間（往復）を入力', ''], 
@@ -39,9 +42,9 @@
        ['4', '4'],
        ['5', '5'],
        ],selected: optime.commute), {}, {class: 'optime__select'} %>
-  </div>
-  <div class="field">
-  <%= f.label :work ,class: "subject"%>
+        </div>
+        <div class="form-group">
+        <%= f.label :work ,class: "subject"%>
     <%= f.select :work, 
        options_for_select([
        ['勤務時間を入力', ''], 
@@ -58,9 +61,9 @@
        ['10', '10'],
        ['11', '11']
        ],selected: optime.work), {}, {class: 'optime__select'} %>
-  </div>
-  <div class="field">
-  <%= f.label :eat ,class: "subject"%>
+        </div>
+        <div class="form-group">
+       <%= f.label :eat ,class: "subject"%>
     <%= f.select :eat, 
        options_for_select([
        ['食事時間を入力', ''],
@@ -77,9 +80,9 @@
        ['10', '10'],
        ['11', '11']
        ],selected: optime.eat), {}, {class: 'optime__select'} %>
-  </div>
-  <div class="field">
-  <%= f.label :hygiene ,class: "subject"%>
+        </div>
+        <div class="form-group">
+    <%= f.label :hygiene ,class: "subject"%>
     <%= f.select :hygiene, 
        options_for_select([
        ['衛生（風呂歯磨きトイレ）時間を入力', ''], 
@@ -96,8 +99,11 @@
        ['10', '10'],
        ['11', '11']
        ],selected: optime.hygiene), {}, {class: 'optime__select'} %>
+        </div>
+        <div class="actions">
+          <%= f.submit class: 'btn btn-primary' %>
+        </div>
+      <% end %> 
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit class: 'btn btn-primary' %>
-  </div>
-<% end %>
+</div>
