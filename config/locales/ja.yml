@@ -5,7 +5,7 @@ ja:
         guest_name: ゲスト名
       optime:
         sleepy: "睡眠"
-        title: "タイトル"
+        title: "いつの可処分時間？"
         work: "勤務"
         commute: "通勤"
         eat: "食事"
