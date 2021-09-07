@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_23_000801) do
+ActiveRecord::Schema.define(version: 2021_09_07_003750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "guest_users", force: :cascade do |t|
+    t.string "guest_name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "optimes", force: :cascade do |t|
-    t.string "title", null: false
+    t.date "title", null: false
     t.integer "sleepy", null: false
     t.integer "commute", null: false
     t.integer "eat", null: false
