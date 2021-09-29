@@ -9,7 +9,7 @@
       <%= image_tag 'hygiene.svg',name: '衛生'%>
 </div>
 <p class = "text-center">お名前を入力してください。</p>
-
+<%= link_to 'Patient Record', optimes_path(@optime) %>
 <%= form_with model: @user, html: { class: 'text-center mt-3' },  local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
      <div class="form-group ms-4">
